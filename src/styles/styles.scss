@@ -1,0 +1,43 @@
+/* mixins */
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* variables */
+
+// colors
+$basic-orange: #fbab7e;
+$mild-orange: #f7ce68;
+$strong-orange: rgb(255, 145, 0);
+$orange-linear-gradient: linear-gradient(297.24deg, $basic-orange 0%, $mild-orange 100%);
+$light-grey: #f6f6f6;
+$light-medium-grey: rgb(211,211,211);
+$medium-grey: rgb(169,169,169);
+$dark-grey: rgb(104,104,104);
+
+// fonts sizes
+$extra-large-font: 48px;
+$large-font: 36px;
+$medium-large-font: 28px;
+$medium-font: 22px;
+$small-medium-font: 16px;
+$small-font: 12px;
+$extra-small-font: 8px;
+
+// fonts families
+$comic-font-family: "Comic Sans MS";
+
+// radius border
+$small-border-radius: 4px;
+
+// screen sizes
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktops: 1200px;
