@@ -1,27 +1,30 @@
-import Vue from 'vue'
-import App from './App.vue'
-import Store from './store'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Store from './store';
+import App from './App.vue';
 
-export const bus = new Vue()
+import AppCoupons from './components/AppCoupons.vue';
+import AppBusinesses from './components/AppBusinesses.vue';
 
-Vue.use(VueRouter)
-Vue.config.productionTip = false
+const bus = new Vue();
+export default bus;
 
+Vue.config.productionTip = false;
+
+Vue.use(VueRouter);
 const routes = [
-  { path: '/coupons', alias: '/', component: Coupons },
-  { path: '/businneses', component: Businneses }
-]
+  { path: '/coupons', alias: '/', component: AppCoupons },
+  { path: '/businesses', component: AppBusinesses },
+];
 
-// Create the router instance and pass the `routes` option
 const router = new VueRouter({
-  routes
-})
+  routes,
+});
 
 new Vue({
-  render (createElement) {
-    return createElement(App)
+  render(createElement) {
+    return createElement(App);
   },
   router,
-  store: Store
-}).$mount('#app')
+  store: Store,
+}).$mount('#app');

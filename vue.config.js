@@ -4,8 +4,8 @@ module.exports = {
     requireModuleExtension: false,
     loaderOptions: {
       sass: {
-        prependData: '@import \'@/styles/styles.scss\';'
-      }
-    }
-  }
-}
+        prependData: '@import \'@/styles/styles.scss\';',
+      },
+    },
+  },
+};
