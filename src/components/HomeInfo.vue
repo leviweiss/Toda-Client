@@ -1,12 +1,12 @@
 <template>
-  <div id="app-about-us" class="app-about-us-container">
-    <p>about us</p>
+  <div id="app-home-info" class="app-home-info-container">
+
   </div>
 </template>
 
 <script>
 export default {
-
+  name: 'AppHomeInfo',
 };
 </script>
 

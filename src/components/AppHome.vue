@@ -1,15 +1,25 @@
 <template>
   <div id="app-home" class="app-home-container">
-    <p>home</p>
+    <app-top-page>
+    </app-top-page>
+    <home-info>
+    </home-info>
   </div>
 </template>
 
 <script>
-export default {
+import AppTopPage from './AppTopPage.vue';
+import HomeInfo from './HomeInfo.vue';
 
+export default {
+  name: 'AppHome',
+  components: {
+    AppTopPage,
+    HomeInfo,
+  },
 };
 </script>
 
-<style>
+<style lang="scss">
 
 </style>
