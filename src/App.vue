@@ -24,6 +24,11 @@ export default {
 </script>
 
 <style lang="scss">
+@import './styles/normalize.css';
+* {
+  box-sizing: border-box;
+}
+
 .app-container {
   @include flex-column;
   font-family: $comic-font-family;

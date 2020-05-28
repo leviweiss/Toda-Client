@@ -18,11 +18,10 @@ export default {
     position: absolute;
     bottom: 0;
     background-color: #82a6cd;
-    left: 8px;
-    right: 8px;
     text-align: center;
     font-size: $medium-large-font;
-    padding: 0.4%;
+    padding: 0.7%;
+    width: 100%;
   }
 }
 </style>
