@@ -3,7 +3,7 @@
     <header class="app-container__header">
       <app-nav/>
     </header>
-    <main>
+    <main class="app-container__main">
       <router-view></router-view>
     </main>
     <app-footer class="app-container__footer"/>
@@ -32,6 +32,10 @@ export default {
 .app-container {
   @include flex-column;
   font-family: $comic-font-family;
+
+  &__main {
+    margin-bottom: 5%;
+  }
 }
 
 </style>

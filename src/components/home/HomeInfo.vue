@@ -1,9 +1,9 @@
 <template>
-  <div id="app-home-info" class="app-home-info-container">
-    <home-categories/>
-    <home-buttons/>
-    <home-dropdowns/>
-    <home-data-list/>
+  <div id="home-info" class="home-info-container">
+    <home-categories class="home-info-container__categories"/>
+    <home-buttons class="home-info-container__buttons"/>
+    <home-dropdowns class="home-info-container__dropdowns"/>
+    <home-data-list class="home-info-container__data-list"/>
   </div>
 </template>
 
@@ -22,5 +22,10 @@ export default {
 </script>
 
 <style lang="scss">
+// .home-info-container {
+  // &__categories {
+
+  // }
+// }
 
 </style>

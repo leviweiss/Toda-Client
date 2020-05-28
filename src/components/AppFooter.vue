@@ -15,7 +15,7 @@ export default {
 <style lang="scss">
 .app-footer-container {
   &__main {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background-color: #82a6cd;
     text-align: center;

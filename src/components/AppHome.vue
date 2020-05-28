@@ -1,9 +1,7 @@
 <template>
   <div id="app-home" class="app-home-container">
-    <app-top-page>
-    </app-top-page>
-    <home-info>
-    </home-info>
+    <app-top-page class="app-home-container__top-page"/>
+    <home-info class="app-home-container__home-info"/>
   </div>
 </template>
 
@@ -21,5 +19,14 @@ export default {
 </script>
 
 <style lang="scss">
+.app-home-container {
+  &__top-page {
+    margin-bottom: 1%;
+  }
+
+  &__home-info {
+    margin-bottom: 1%;
+  }
+}
 
 </style>

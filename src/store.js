@@ -14,7 +14,7 @@ export default new Vuex.Store({
       },
       {
         id: 2,
-        name: 'Fashion & Beauty',
+        name: 'Fashion&Beauty',
       },
       {
         id: 3,
@@ -22,7 +22,7 @@ export default new Vuex.Store({
       },
       {
         id: 4,
-        name: 'Alternative Medicine',
+        name: 'Alternative-Medicine',
       },
       {
         id: 5,
@@ -34,19 +34,11 @@ export default new Vuex.Store({
       },
       {
         id: 7,
-        name: 'Home Decoration',
+        name: 'Home-Decoration',
       },
       {
         id: 8,
-        name: 'Pleasure & Vacation',
-      },
-      {
-        id: 9,
-        name: 'Businesses',
-      },
-      {
-        id: 10,
-        name: 'Tourism & Vacation',
+        name: 'Pleasure&Vacation',
       },
     ],
   },
