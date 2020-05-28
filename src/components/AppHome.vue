@@ -9,7 +9,7 @@
 
 <script>
 import AppTopPage from './AppTopPage.vue';
-import HomeInfo from './HomeInfo.vue';
+import HomeInfo from './home/HomeInfo.vue';
 
 export default {
   name: 'AppHome',
