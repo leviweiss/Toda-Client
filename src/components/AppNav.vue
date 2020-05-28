@@ -41,7 +41,7 @@ export default {
 
 <style lang="scss">
 .app-nav-container {
-  background: linear-gradient(180deg,#0b2677,#19549b);
+  background: $light-blue-linear-gradient;
   @include flex-row;
   align-items: center;
   font-family: $comic-font-family;

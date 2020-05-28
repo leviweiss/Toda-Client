@@ -43,12 +43,16 @@ export default new Vuex.Store({
     ],
   },
   mutations: {
-
+    SET_CHOSEN_CATEGORY(state, categoryId) {
+      state.chosenCategory = categoryId;
+    },
   },
   getters: {
 
   },
   actions: {
-
+    setChosenCategory({ commit }, categoryId) {
+      commit('SET_CHOSEN_CATEGORY', categoryId);
+    },
   },
 });

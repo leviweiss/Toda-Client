@@ -25,7 +25,7 @@ export default {
 .app-top-page-container {
   @include flex-row;
   justify-content: space-between;
-  background: linear-gradient(180deg,#020e31,#023470);
+  background: $blue-linear-gradient;
   align-items: center;
 
   &__counter {

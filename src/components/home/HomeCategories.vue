@@ -1,6 +1,8 @@
 <template>
   <div id="home-categories" class="home-categories-container">
-    <div class="home-categories-container__category" v-for="category in categories" :key="category.id">
+    <div class="home-categories-container__category" v-for="category in categories" :key="category.id"
+    @click="setChosenCategory(category.id)"
+    :class="{'home-categories-container__category--chosen': chosenCategory === category.id}">
       <img :src="images[category.id]" alt="NotFound" class="home-categories-container__category__image"/>
     </div>
   </div>
@@ -42,7 +44,16 @@ export default {
   &__category {
     width: (100% / 8) - 2%;
     text-align: center;
-    border: solid 3px;
+    border: solid 3px $basic-blue;
+    border-radius: $small-border-radius;
+    cursor: pointer;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+    &--chosen {
+      opacity: 1;
+    }
 
     &__image {
       width: 100%;
