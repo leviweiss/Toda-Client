@@ -49,7 +49,6 @@ export default {
 
     &__search-bar {
       text-align: center;
-      color: white;
     }
   }
 
