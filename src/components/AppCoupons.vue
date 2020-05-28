@@ -1,6 +1,6 @@
 <template>
   <div id="app-coupons" class="app-coupons-container">
-    <p>I'm a coupon!</p>
+    <p>coupon</p>
   </div>
 </template>
 
