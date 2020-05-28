@@ -15,7 +15,7 @@ Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
 const routes = [
-  { path: '/home', alias: '/', component: AppHome },
+  { path: '/', component: AppHome },
   { path: '/coupons', component: AppCoupons },
   { path: '/businesses', component: AppBusinesses },
   { path: '/about-us', component: AppAboutUs },

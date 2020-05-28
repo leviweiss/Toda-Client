@@ -2,7 +2,7 @@
   <nav id="app-nav" class="app-nav-container">
     <img src="../assets/logo.png" class="app-nav-container__logo" @click="goToHome"/>
     <div class="app-nav-container__links">
-      <router-link to="home" class="app-nav-container__links__home">
+      <router-link to="/" class="app-nav-container__links__home">
         Home
       </router-link>
       <router-link to="coupons" class="app-nav-container__links__coupons">
@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     goToHome() {
-      this.$router.push('home');
+      this.$router.push('/');
     },
     ...mapActions([
       'setActiveTab',
