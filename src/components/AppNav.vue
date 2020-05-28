@@ -45,6 +45,7 @@ export default {
   @include flex-row;
   align-items: center;
   font-family: $comic-font-family;
+  padding: 0.8%;
 
   &__logo {
     color: white;

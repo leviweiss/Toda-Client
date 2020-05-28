@@ -30,8 +30,10 @@ export default {
 
   &__counter {
     width: 15%;
+    height: 40px;
+    padding: 9px;
     text-align: center;
-    font-size: 40px;
+    font-size: 20px;
     background-color: gray;
     margin: 1%;
   }
@@ -45,16 +47,20 @@ export default {
     &__header {
       text-align: center;
       color: white;
+      font-size: 30px;
+      margin: 1%;
     }
 
     &__search-bar {
       text-align: center;
+      font-size: 20px;
+      margin: 1%;
     }
   }
 
   &__cart {
     width: 15%;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     margin: 1%;
     background-color: gray;
