@@ -45,7 +45,7 @@ export default {
   @include flex-row;
   align-items: center;
   font-family: $comic-font-family;
-  padding: 0.8%;
+  padding: 0.5%;
 
   &__logo {
     color: white;
@@ -64,75 +64,19 @@ export default {
     }
 
     &__home {
-      color: white;
-      text-decoration: none;
-      font-size: $large-font;
-      margin-right: 2%;
-      opacity: 0.5;
-
-      &:hover {
-        opacity: 1;
-      }
-
-      &--active {
-        opacity: 1;
-      }
-
-      .router-link-exact-active {
-        opacity: 1;
-      }
+      @include nav-bar-element;
     }
 
     &__coupons {
-      color: white;
-      text-decoration: none;
-      font-size: $large-font;
-      margin-right: 2%;
-      opacity: 0.5;
-
-      &:hover {
-        opacity: 1;
-      }
-
-      &--active {
-        opacity: 1;
-      }
-
-      .router-link-exact-active {
-        opacity: 1;
-      }
+      @include nav-bar-element;
     }
 
     &__businesses {
-      color: white;
-      text-decoration: none;
-      font-size: $large-font;
-      margin-right: 2%;
-      opacity: 0.5;
-
-      &:hover {
-        opacity: 1;
-      }
-
-      &--active {
-        opacity: 1;
-      }
+      @include nav-bar-element;
     }
 
     &__about-us {
-      color: white;
-      text-decoration: none;
-      font-size: $large-font;
-      margin-right: 2%;
-      opacity: 0.5;
-
-      &:hover {
-        opacity: 1;
-      }
-
-      &--active {
-        opacity: 1;
-      }
+      @include nav-bar-element;
     }
   }
 }

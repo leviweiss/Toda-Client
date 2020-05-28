@@ -9,6 +9,22 @@
   flex-direction: column;
 }
 
+@mixin nav-bar-element {
+  color: white;
+  text-decoration: none;
+  font-size: $medium-large-font;
+  margin-right: 2%;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &--active {
+    opacity: 1;
+  }
+}
+
 /* variables */
 
 // colors
