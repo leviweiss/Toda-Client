@@ -1,5 +1,14 @@
 <template>
-  <div id="home-categories" class="home-categories-container">
+  <div id="home-buttons" class="home-buttons-container">
+    <!-- <div v-show="chosenCategory != undefined" class="home-buttons-container__buttons"> -->
+    <div class="home-buttons-container__buttons">
+      <button class="home-buttons-container__buttons__coupon">
+        Coupons
+      </button>
+      <button class="home-buttons-container__buttons__business">
+        Businesses
+      </button>
+    </div>
   </div>
 </template>
 
@@ -7,7 +16,7 @@
 import { mapState, mapActions } from 'vuex';
 
 export default {
-  name: 'home-categories',
+  name: 'home-buttons',
   computed: {
     ...mapState({
       chosenCategory: (state) => state.chosenCategory,
@@ -25,6 +34,21 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.home-buttons-container {
+  &__buttons {
+    @include flex-row;
+    justify-content: center;
+    align-items: center;
+
+    &__coupon {
+      @include home-button;
+    }
+
+    &__business {
+      @include home-button;
+    }
+  }
+}
 
 </style>

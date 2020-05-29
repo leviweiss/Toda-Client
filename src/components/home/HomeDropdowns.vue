@@ -1,5 +1,5 @@
 <template>
-  <div id="home-categories" class="home-categories-container">
+  <div id="home-dropdowns" class="home-dropdowns-container">
   </div>
 </template>
 
@@ -7,7 +7,7 @@
 import { mapState, mapActions } from 'vuex';
 
 export default {
-  name: 'home-categories',
+  name: 'home-dropdowns',
   computed: {
     ...mapState({
       chosenCategory: (state) => state.chosenCategory,

@@ -64,6 +64,7 @@ export default {
     text-align: center;
     margin: 1%;
     background-color: gray;
+    font-family: $comic-font-family;
   }
 }
 

@@ -41,17 +41,17 @@ export default {
 
 <style lang="scss">
 .app-nav-container {
-  background: $light-blue-linear-gradient;
+  background: $blue-linear-gradient;
   @include flex-row;
   align-items: center;
   font-family: $comic-font-family;
-  padding: 0.5%;
+  padding: 1.0%;
 
   &__logo {
     color: white;
-    width: 10%;
+    width: 13%;
     cursor: pointer;
-    margin-right: 3%;
+    margin-right: 5%;
   }
 
   &__links {

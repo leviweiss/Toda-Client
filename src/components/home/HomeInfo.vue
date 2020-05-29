@@ -22,10 +22,13 @@ export default {
 </script>
 
 <style lang="scss">
-// .home-info-container {
-  // &__categories {
-
-  // }
-// }
+.home-info-container {
+  &__categories {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+  }
+}
 
 </style>

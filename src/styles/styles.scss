@@ -13,7 +13,7 @@
   color: white;
   text-decoration: none;
   font-size: $medium-large-font;
-  margin-right: 2%;
+  margin-right: 4%;
   opacity: 0.5;
 
   &:hover {
@@ -25,14 +25,39 @@
   }
 }
 
+@mixin home-button {
+  margin-right: 2%;
+  font-size: $medium-large-font;
+  font-family: $comic-font-family;
+  padding: 1%;
+  width: 15%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: $mild-blue;
+  color: white;
+  cursor: pointer;
+  opacity: 0.5;
+  &:hover {
+    background-color: $basic-blue;
+    opacity: 1;
+  }
+
+}
+
 /* variables */
 
 // colors
+$light-blue: #2676d8;
 $mild-blue: #19549b;
 $basic-blue: #023470;
 $strong-blue: #020e31;
 $blue-linear-gradient: linear-gradient(180deg, $strong-blue, $basic-blue);
 $light-blue-linear-gradient: linear-gradient(180deg, $basic-blue, $mild-blue);
+
+$pink: #e52e71;
+$orange: #ff8a00;
+$pink-orange-linear-gradient: linear-gradient(145deg, $orange, $pink);
+
 $light-grey: #f6f6f6;
 $light-medium-grey: rgb(211,211,211);
 $medium-grey: rgb(169,169,169);

@@ -39,15 +39,16 @@ export default {
   @include flex-row;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: 90%;
 
   &__category {
-    width: (100% / 8) - 2%;
+    width: (100% / 8) - 3%;
     text-align: center;
     border: solid 3px $basic-blue;
     border-radius: $small-border-radius;
     cursor: pointer;
     opacity: 0.5;
+
     &:hover {
       opacity: 1;
     }

@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    chosenCategory: 1,
+    chosenCategory: undefined,
     categories: [
       {
         id: 1,
