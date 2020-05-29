@@ -18,9 +18,6 @@ export default {
     ...mapActions([
       'setChosenCategory',
     ]),
-    getImageName(categoryName) {
-      return `@assets/${categoryName}.png`;
-    },
   },
 };
 </script>

@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    chosenCategory: undefined,
+    chosenCategory: 3,
     chosenHomeButton: 'coupon',
     filter1Value: undefined,
     categories: [

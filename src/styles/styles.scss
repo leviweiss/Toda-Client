@@ -41,12 +41,10 @@
 }
 
 @mixin home-dropdown {
-  margin-right: 3%;
-  margin-left: 3%;
   font-size: $small-medium-font;
   font-family: $comic-font-family;
-  padding: 1%;
-  width: 12%;
+  padding: 5%;
+  width: 100%;
   background-color: $light-blue;
   color: white;
   cursor: pointer;

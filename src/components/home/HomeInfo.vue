@@ -16,7 +16,10 @@ import HomeDataList from './HomeDataList.vue';
 export default {
   name: 'HomeInfo',
   components: {
-    HomeCategories, HomeButtons, HomeDropdowns, HomeDataList,
+    HomeCategories,
+    HomeButtons,
+    HomeDropdowns,
+    HomeDataList,
   },
 };
 </script>

@@ -1,6 +1,5 @@
 <template>
-  <div id="home-buttons" class="home-buttons-container">
-    <!-- <div v-show="chosenCategory != undefined" class="home-buttons-container__buttons"> -->
+  <div id="home-buttons" v-show="chosenCategory !== undefined" class="home-buttons-container">
     <button class="home-buttons-container__coupon"
     @click="setChosenHomeButton('coupon')"
     :class="{'home-buttons-container__coupon--active': chosenHomeButton === 'coupon'}">
@@ -11,7 +10,6 @@
     :class="{'home-buttons-container__business--active': chosenHomeButton === 'business'}">
       Businesses
     </button>
-
   </div>
 </template>
 
@@ -23,6 +21,7 @@ export default {
   computed: {
     ...mapState({
       chosenHomeButton: (state) => state.chosenHomeButton,
+      chosenCategory: (state) => state.chosenCategory,
     }),
   },
   methods: {
