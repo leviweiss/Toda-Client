@@ -2,10 +2,14 @@
   <div id="home-buttons" class="home-buttons-container">
     <!-- <div v-show="chosenCategory != undefined" class="home-buttons-container__buttons"> -->
     <div class="home-buttons-container__buttons">
-      <button class="home-buttons-container__buttons__coupon">
+      <button class="home-buttons-container__buttons__coupon"
+      @click="setChosenHomeButton('coupon')"
+      :class="{'home-buttons-container__buttons__coupon--active': chosenHomeButton === 'coupon'}">
         Coupons
       </button>
-      <button class="home-buttons-container__buttons__business">
+      <button class="home-buttons-container__buttons__business"
+      @click="setChosenHomeButton('business')"
+      :class="{'home-buttons-container__buttons__business--active': chosenHomeButton === 'business'}">
         Businesses
       </button>
     </div>
@@ -19,13 +23,12 @@ export default {
   name: 'home-buttons',
   computed: {
     ...mapState({
-      chosenCategory: (state) => state.chosenCategory,
-      categories: (state) => state.categories,
+      chosenHomeButton: (state) => state.chosenHomeButton,
     }),
   },
   methods: {
     ...mapActions([
-      'setChosenCategory',
+      'setChosenHomeButton',
     ]),
     getImageName(categoryName) {
       return `@assets/${categoryName}.png`;

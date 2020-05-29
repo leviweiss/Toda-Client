@@ -7,6 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     chosenCategory: undefined,
+    chosenHomeButton: 'coupon',
     categories: [
       {
         id: 1,
@@ -46,6 +47,9 @@ export default new Vuex.Store({
     SET_CHOSEN_CATEGORY(state, categoryId) {
       state.chosenCategory = categoryId;
     },
+    SET_CHOSEN_HOME_BUTTON(state, buttonName) {
+      state.chosenHomeButton = buttonName;
+    },
   },
   getters: {
 
@@ -53,6 +57,9 @@ export default new Vuex.Store({
   actions: {
     setChosenCategory({ commit }, categoryId) {
       commit('SET_CHOSEN_CATEGORY', categoryId);
+    },
+    setChosenHomeButton({ commit }, buttonName) {
+      commit('SET_CHOSEN_HOME_BUTTON', buttonName);
     },
   },
 });

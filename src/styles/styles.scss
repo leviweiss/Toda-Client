@@ -16,11 +16,7 @@
   margin-right: 4%;
   opacity: 0.5;
 
-  &:hover {
-    opacity: 1;
-  }
-
-  &--active {
+  &:hover, &--active {
     opacity: 1;
   }
 }
@@ -37,11 +33,10 @@
   color: white;
   cursor: pointer;
   opacity: 0.5;
-  &:hover {
+  &:hover, &--active {
     background-color: $basic-blue;
     opacity: 1;
   }
-
 }
 
 /* variables */
