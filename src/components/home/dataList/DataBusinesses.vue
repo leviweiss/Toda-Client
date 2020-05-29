@@ -1,5 +1,5 @@
 <template>
-  <div id="home-data-list" class="home-data-list-container">
+  <div id="data-list" class="data-list-container">
   </div>
 </template>
 
@@ -7,7 +7,7 @@
 import { mapState, mapActions } from 'vuex';
 
 export default {
-  name: 'home-data-list',
+  name: 'data-list',
   computed: {
     ...mapState({
       chosenCategory: (state) => state.chosenCategory,
@@ -22,6 +22,6 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 
 </style>

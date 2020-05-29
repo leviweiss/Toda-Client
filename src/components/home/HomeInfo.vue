@@ -3,7 +3,7 @@
     <home-categories class="home-info-container__categories"/>
     <home-buttons class="home-info-container__buttons"/>
     <home-dropdowns class="home-info-container__dropdowns"/>
-    <home-data-list class="home-info-container__data-list"/>
+    <data-list class="home-info-container__data-list"/>
   </div>
 </template>
 
@@ -11,7 +11,7 @@
 import HomeCategories from './HomeCategories.vue';
 import HomeButtons from './HomeButtons.vue';
 import HomeDropdowns from './HomeDropdowns.vue';
-import HomeDataList from './HomeDataList.vue';
+import DataList from './dataList/DataList.vue';
 
 export default {
   name: 'HomeInfo',
@@ -19,7 +19,7 @@ export default {
     HomeCategories,
     HomeButtons,
     HomeDropdowns,
-    HomeDataList,
+    DataList,
   },
 };
 </script>
