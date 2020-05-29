@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 import Vue from 'vue';
 import Vuex from 'vuex';
+import mainService from './services/mainService';
 
 Vue.use(Vuex);
 
@@ -9,6 +10,8 @@ export default new Vuex.Store({
     chosenCategory: 3,
     chosenHomeButton: 'coupon',
     filter1Value: undefined,
+    showCouponModal: false,
+    couponModalToShow: undefined,
     categories: [
       {
         id: 1,
@@ -54,6 +57,20 @@ export default new Vuex.Store({
     FILTER1_ON_CHANGE(state, value) {
       state.filter1Value = value;
     },
+    OPEN_COUPON_MODAL(state, coupon) {
+      state.showCouponModal = true;
+      state.couponModalToShow = coupon;
+    },
+    CLOSE_COUPON_MODAL(state) {
+      state.showCouponModal = false;
+      state.couponModalToShow = undefined;
+    },
+    SET_COUPONS(state, coupons) {
+      state.coupons = coupons;
+    },
+    SET_BUSINESSES(state, businesses) {
+      state.businesses = businesses;
+    },
   },
   getters: {
 
@@ -67,6 +84,17 @@ export default new Vuex.Store({
     },
     filter1OnChange({ commit }, event) {
       commit('FILTER1_ON_CHANGE', event.target.value);
+    },
+    openCouponModal({ commit }, coupon) {
+      commit('OPEN_COUPON_MODAL', coupon);
+    },
+    closeCouponModal({ commit }) {
+      commit('CLOSE_COUPON_MODAL');
+    },
+    getCoupons({ commit }) {
+      const data = mainService.getAllData();
+      commit('SET_COUPONS', data.coupons);
+      commit('SET_BUSINESSES', data.businesses);
     },
   },
 });

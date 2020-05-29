@@ -1,8 +1,8 @@
 <template>
   <div id="data-coupons" class="data-coupons-container">
     <div class="data-coupons-container__coupon" v-for="coupon in coupons" :key="coupon.id"
-    @click="openCouponModal(coupon.id)">
-      <img :src="images[category.id]" alt="NotFound" class="data-coupons-container__coupon__image"/>
+    @click="openCouponModal(coupon)">
+      <coupon v-bind="coupon"/>
     </div>
     <coupon-modal v-show="showCouponModal" @close="closeCouponModal"/>
   </div>
@@ -13,6 +13,9 @@ import { mapState, mapActions } from 'vuex';
 
 export default {
   name: 'data-coupons',
+  beforeMount() {
+    this.getCoupons();
+  },
   computed: {
     ...mapState({
       showCouponModal: (state) => state.showCouponModal,
@@ -23,6 +26,7 @@ export default {
     ...mapActions([
       'openCouponModal',
       'closeCouponModal',
+      'getCoupons',
     ]),
   },
 };
