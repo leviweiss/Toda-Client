@@ -37,17 +37,19 @@ export default {
 <style lang="scss">
 .home-categories-container {
   @include flex-row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 90%;
 
   &__category {
-    width: (100% / 8) - 3%;
+    width: (100% / 8) - 5%;
     text-align: center;
     border: solid 3px $basic-blue;
     border-radius: $small-border-radius;
     cursor: pointer;
     opacity: 0.5;
+    margin-right: 1%;
+    margin-left: 1%;
 
     &:hover {
       opacity: 1;

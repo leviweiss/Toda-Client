@@ -49,7 +49,7 @@ export default {
 
   &__logo {
     color: white;
-    width: 13%;
+    width: 8%;
     cursor: pointer;
     margin-right: 5%;
   }

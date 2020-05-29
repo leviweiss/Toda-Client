@@ -8,6 +8,7 @@ export default new Vuex.Store({
   state: {
     chosenCategory: undefined,
     chosenHomeButton: 'coupon',
+    filter1Value: undefined,
     categories: [
       {
         id: 1,
@@ -50,6 +51,9 @@ export default new Vuex.Store({
     SET_CHOSEN_HOME_BUTTON(state, buttonName) {
       state.chosenHomeButton = buttonName;
     },
+    FILTER1_ON_CHANGE(state, value) {
+      state.filter1Value = value;
+    },
   },
   getters: {
 
@@ -60,6 +64,9 @@ export default new Vuex.Store({
     },
     setChosenHomeButton({ commit }, buttonName) {
       commit('SET_CHOSEN_HOME_BUTTON', buttonName);
+    },
+    filter1OnChange({ commit }, event) {
+      commit('FILTER1_ON_CHANGE', event.target.value);
     },
   },
 });

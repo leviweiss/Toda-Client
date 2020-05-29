@@ -47,13 +47,13 @@ export default {
     &__header {
       text-align: center;
       color: white;
-      font-size: 30px;
+      font-size: 20px;
       margin: 1%;
     }
 
     &__search-bar {
       text-align: center;
-      font-size: 20px;
+      font-size: 10px;
       margin: 1%;
     }
   }

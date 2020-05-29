@@ -22,11 +22,12 @@
 }
 
 @mixin home-button {
-  margin-right: 2%;
-  font-size: $medium-large-font;
+  margin-right: 1%;
+  margin-left: 1%;
+  font-size: $medium-font;
   font-family: $comic-font-family;
   padding: 1%;
-  width: 15%;
+  width: 12%;
   overflow: hidden;
   text-overflow: ellipsis;
   background-color: $mild-blue;
@@ -37,6 +38,18 @@
     background-color: $basic-blue;
     opacity: 1;
   }
+}
+
+@mixin home-dropdown {
+  margin-right: 3%;
+  margin-left: 3%;
+  font-size: $small-medium-font;
+  font-family: $comic-font-family;
+  padding: 1%;
+  width: 12%;
+  background-color: $light-blue;
+  color: white;
+  cursor: pointer;
 }
 
 /* variables */
