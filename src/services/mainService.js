@@ -4,6 +4,8 @@ function getData() {
     coupons.push({
       name: `name${i}`,
       description: `description${i}`,
+      priceNow: `${i}`,
+      priceBefore: `${i}`,
     });
   }
   const businesses = [];
@@ -11,6 +13,8 @@ function getData() {
     businesses.push({
       name: `name${i}`,
       description: `description${i}`,
+      priceNow: `${i}`,
+      priceBefore: `${i}`,
     });
   }
 

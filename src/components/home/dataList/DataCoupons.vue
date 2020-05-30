@@ -47,5 +47,11 @@ export default {
 </script>
 
 <style lang="scss">
+.data-coupons-container {
+  @include flex-row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 </style>

@@ -39,6 +39,13 @@ export default {
     margin-right: auto;
     margin-bottom: 1%;
   }
+
+  &__dropdowns {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+  }
 }
 
 </style>
