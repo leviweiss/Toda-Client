@@ -116,7 +116,7 @@ export default {
       &__price-before {
         font-size: $small-medium-font;
         margin-left: 3%;
-        text-decoration: line-through;
+        text-decoration: line-through $light-orange;;
         color: $orange;
         font-weight: bold;
       }

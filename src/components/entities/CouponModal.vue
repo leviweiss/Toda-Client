@@ -23,11 +23,15 @@
                 </div>
               </div>
               <div class="modal-container__info__details__address">
-                {{ couponModalToShow.address }}
+                <img src="../../assets/couponModal/address.png" alt="NotFound"
+                class="modal-container__info__details__address__icon"/>
+                <div class="modal-container__info__details__address__name">
+                  {{ couponModalToShow.address }}
+                </div>
               </div>
-              <div class="modal-container__info__details__link-to-business-home-page">
+              <button class="modal-container__info__details__link-to-business-home-page">
                 Business Page
-              </div>
+              </button>
             </div>
           </div>
           <div class="modal-container__prices">
@@ -42,12 +46,12 @@
             </div>
           </div>
           <div class="modal-container__buttons">
-            <div class="modal-container__buttons__pay">
+            <button class="modal-container__buttons__pay">
               Pay
-            </div>
-            <div class="modal-container__buttons__add-to-chart">
+            </button>
+            <button class="modal-container__buttons__add-to-chart">
               Add To Chart
-            </div>
+            </button>
           </div>
         </div>
       </div>
@@ -118,34 +122,30 @@ export default {
   &__info {
     @include flex-row;
     margin: 2.5% 7% 3% 3%;
-    border: solid 3px red;
 
     &__image {
       width: 40%;
       margin-right: 0.5%;
       padding: 0.5%;
       background: $light-orange;
-      border: solid 3px green;
     }
 
     &__details {
       width: 60%;
       margin-left: 0.5%;
       padding: 0.5%;
-      border: solid 3px green;
       @include flex-column;
       justify-content: space-between;
 
       &__name {
-        font-size: $medium-large-font;
+        font-size: $large-font;
         font-weight: bold;
         color: $blue;
-        border: solid 3px red;
       }
 
       &__description {
         font-size: $small-medium-font;
-        border: solid 3px red;
+        font-size: 100%;
       }
 
       &__phone {
@@ -153,22 +153,106 @@ export default {
 
         &__icon {
           width: 10%;
-          border: solid 3px red;
+          margin-right: 1%;
         }
 
         &__number {
-          border: solid 3px red;
           padding: 1%;
+          font-size: $medium-font;
+          font-size: 100%;
         }
       }
 
-
       &__address {
+        @include flex-row;
 
+        &__icon {
+          width: 10%;
+          margin-right: 1%;
+        }
+
+        &__name {
+          padding: 1%;
+          font-size: $medium-font;
+          font-size: 100%;
+        }
       }
 
       &__link-to-business-home-page {
+        background: $light-orange;
+        width: 50%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-size: 100%;
+        border: none;
+        cursor: pointer;
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+  }
 
+  &__prices {
+    @include flex-row;
+    margin: 2.5% 7% 3% 3%;
+
+    &__price-name {
+      font-size: $medium-large-font;
+      margin-right: 3%;
+      color: $blue;
+      font-weight: bold;
+    }
+
+    &__price-now {
+      font-size: $medium-large-font;
+      margin-left: 1%;
+      margin-right: 3%;
+      color: $blue;
+      font-weight: bold;
+    }
+
+    &__price-before {
+      font-size: $medium-large-font;
+      margin-left: 3%;
+      text-decoration: line-through $light-orange;
+      color: $orange;
+      font-weight: bold;
+    }
+  }
+
+  &__buttons {
+    @include flex-row;
+    margin: 2.5% 7% 3% 3%;
+
+    &__pay {
+      background: $blue;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      width: 30%;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      margin-right: 3%;
+      font-size: $medium-font;
+      cursor: pointer;
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    &__add-to-chart {
+      background: $blue;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      width: 30%;
+      border: none;
+      color: white;
+      font-size: $medium-font;
+      border-radius: 5px;
+      cursor: pointer;
+      &:focus {
+        outline: 0;
       }
     }
   }
