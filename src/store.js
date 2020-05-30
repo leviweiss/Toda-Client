@@ -8,7 +8,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     chosenCategory: 1,
-    chosenHomeButton: 'coupon',
+    chosenHomeButton: 'business',
     filter1Value: undefined,
     showCouponModal: false,
     couponModalToShow: undefined,
@@ -73,6 +73,13 @@ export default new Vuex.Store({
         allCouponsInfo = allCouponsInfo.concat(state.data.catagories[i].coupons);
       }
       return allCouponsInfo;
+    },
+    allBusinessesInfo: (state) => {
+      let allBusinessesInfo = [];
+      for (let i = 0; i < state.data.catagories.length; i += 1) {
+        allBusinessesInfo = allBusinessesInfo.concat(state.data.catagories[i].businesses);
+      }
+      return allBusinessesInfo;
     },
   },
   actions: {

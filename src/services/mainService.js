@@ -13,8 +13,6 @@ function getData() {
     businesses.push({
       name: `name${i}`,
       description: `description${i} `.repeat(10),
-      priceNow: `${i}`,
-      priceBefore: `${i}`,
     });
   }
 

@@ -1,6 +1,6 @@
 <template>
   <div id="data-businesses" class="data-businesses-container">
-    <div class="data-businesses-container__businesses" v-for="business in allBusinessesInfo" :key="business.id"
+    <div class="data-businesses-container__business" v-for="business in allBusinessesInfo" :key="business.id"
     @click="openBusinessModal(business)">
       <business v-bind="business"/>
     </div>
@@ -52,12 +52,14 @@ export default {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-right: 8%;
+  margin-left: 8%;
 
   &__business {
     margin-bottom: 3%;
-    width: (100% / 3) - 5%;
-    margin-right: 1%;
-    margin-left: 1%;
+    width: 18%;
+    margin-right: 3%;
+    margin-left: 3%;
   }
 }
 
