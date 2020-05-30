@@ -12,8 +12,8 @@
 import { mapState, mapActions } from 'vuex';
 
 const Businesses = require('../../assets/Businesses.png');
-const Fashion = require('../../assets/Fashion&Beauty.png');
-const Tourism = require('../../assets/Tourism&Vacation.png');
+// const Fashion = require('../../assets/Fashion&Beauty.png');
+// const Tourism = require('../../assets/Tourism&Vacation.png');
 
 export default {
   name: 'home-categories',
@@ -23,7 +23,8 @@ export default {
       categories: (state) => state.categories,
     }),
     images() {
-      return [Businesses, Fashion, Businesses, Tourism, Businesses, Tourism, Fashion, Fashion, Businesses];
+      return [Businesses, Businesses, Businesses, Businesses,
+        Businesses, Businesses, Businesses, Businesses, Businesses];
     },
   },
   methods: {
@@ -39,17 +40,19 @@ export default {
   @include flex-row;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
 
   &__category {
-    width: (100% / 8) - 3%;
+    width: (100% / 8) - 4%;
     text-align: center;
-    border: solid 3px $basic-blue;
-    border-radius: $small-border-radius;
+    border: solid 2px $basic-blue;
+    border-radius: 50%;
     cursor: pointer;
     opacity: 0.5;
     margin-right: 1%;
     margin-left: 1%;
+    background: $light-orange;
+    padding: 1%;
 
     &:hover {
       opacity: 1;
