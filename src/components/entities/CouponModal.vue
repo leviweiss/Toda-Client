@@ -7,15 +7,13 @@
             <i class="fa fa-times"/>
           </div>
           <div class="modal-container__info">
-            <div class="modal-container__info__image">
-              <img :src="image" alt="NotFound" class="coupon-container__image"/>
-            </div>
+            <img :src="image" alt="NotFound" class="modal-container__info__image"/>
             <div class="modal-container__info__details">
               <div class="modal-container__info__details__name">
                 {{ couponModalToShow.name }}
               </div>
               <div class="modal-container__info__details__description">
-                {{ couponModalToShow.description }}
+                {{ processesDescription }}
               </div>
               <div class="modal-container__info__details__phone-number">
                 {{ couponModalToShow.phoneNumber }}
@@ -29,8 +27,23 @@
             </div>
           </div>
           <div class="modal-container__prices">
+            <div class="modal-container__prices__price-name">
+              Price:
+            </div>
+            <div class="modal-container__prices__price-now">
+              {{ couponModalToShow.priceNow }}
+            </div>
+            <div class="modal-container__prices__price-before">
+              {{ couponModalToShow.priceBefore }}
+            </div>
           </div>
           <div class="modal-container__buttons">
+            <div class="modal-container__buttons__pay">
+              Pay
+            </div>
+            <div class="modal-container__buttons__add-to-chart">
+              Add To Chart
+            </div>
           </div>
         </div>
       </div>
@@ -64,10 +77,10 @@ export default {
     },
     processesDescription() {
       const maxLength = 80;
-      if (this.description.length > maxLength) {
-        return `${this.description.substring(0, maxLength)}...`;
+      if (this.couponModalToShow.description.length > maxLength) {
+        return `${this.couponModalToShow.description.substring(0, maxLength)}...`;
       }
-      return this.description;
+      return this.couponModalToShow.description;
     },
   },
   methods: {
@@ -97,6 +110,51 @@ export default {
   background-size: contain;
   // background-size: 90%;
   background-repeat: no-repeat;
+
+  &__info {
+    @include flex-row;
+    margin: 2.5% 7% 3% 3%;
+    border: solid 3px red;
+
+    &__image {
+      width: 40%;
+      margin-right: 0.5%;
+      padding: 0.5%;
+      background: $light-orange;
+      border: solid 3px green;
+    }
+
+    &__details {
+      width: 60%;
+      margin-left: 0.5%;
+      padding: 0.5%;
+      border: solid 3px green;
+      @include flex-column;
+      justify-content: space-between;
+
+      &__name {
+        font-size: $medium-large-font;
+        font-weight: bold;
+        color: $blue;
+      }
+
+      &__description {
+        font-size: $small-medium-font;
+      }
+
+      &__phone-number {
+
+      }
+
+      &__address {
+
+      }
+
+      &__link-to-business-home-page {
+        
+      }
+    }
+  }
 }
 
 .modal-mask {

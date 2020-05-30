@@ -10,7 +10,7 @@
       </div>
       <div class="coupon-container__info__prices">
         <div class="coupon-container__info__prices__price-name">
-          price:
+          Price:
         </div>
         <div class="coupon-container__info__prices__price-now">
           {{ priceNow }}
