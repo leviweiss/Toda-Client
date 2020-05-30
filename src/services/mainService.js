@@ -6,6 +6,8 @@ function getData() {
       description: `description${i} `.repeat(10),
       priceNow: `${i}`,
       priceBefore: `${i}`,
+      phoneNumber: `${i}`.repeat(10),
+      address: 'Tel Aviv, King George 66, Isreal',
     });
   }
   const businesses = [];
