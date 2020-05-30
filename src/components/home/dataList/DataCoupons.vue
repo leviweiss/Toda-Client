@@ -1,6 +1,6 @@
 <template>
   <div id="data-coupons" class="data-coupons-container">
-    <div class="data-coupons-container__coupon" v-for="coupon in coupons" :key="coupon.id"
+    <div class="data-coupons-container__coupon" v-for="coupon in allCouponsInfo" :key="coupon.id"
     @click="openCouponModal(coupon)">
       <coupon v-bind="coupon"/>
     </div>
@@ -9,24 +9,38 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+
+import {
+  mapState,
+  mapActions,
+  mapGetters,
+} from 'vuex';
+
+import Coupon from '../../entities/Coupon.vue';
+import CouponModal from '../../entities/CouponModal.vue';
 
 export default {
   name: 'data-coupons',
+  components: {
+    Coupon,
+    CouponModal,
+  },
   beforeMount() {
-    this.getCoupons();
+    return this.getAllData();
   },
   computed: {
     ...mapState({
       showCouponModal: (state) => state.showCouponModal,
-      coupons: (state) => state.coupons,
+    }),
+    ...mapGetters({
+      allCouponsInfo: 'allCouponsInfo',
     }),
   },
   methods: {
     ...mapActions([
       'openCouponModal',
       'closeCouponModal',
-      'getCoupons',
+      'getAllData',
     ]),
   },
 };
