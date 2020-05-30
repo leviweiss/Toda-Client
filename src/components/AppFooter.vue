@@ -17,11 +17,12 @@ export default {
   &__main {
     position: fixed;
     bottom: 0;
-    background-color: #82a6cd;
+    background-color: $cayn;
     text-align: center;
     font-size: $medium-large-font;
     padding: 0.7%;
     width: 100%;
+    color: white;
   }
 }
 </style>
