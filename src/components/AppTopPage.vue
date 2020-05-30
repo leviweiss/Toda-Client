@@ -1,17 +1,17 @@
 <template>
   <div id="app-top-page" class="app-top-page-container">
-    <div class="app-top-page-container__counter">
+    <!-- <div class="app-top-page-container__counter">
       Counter
-    </div>
+    </div> -->
     <div class="app-top-page-container__center">
       <h1 class="app-top-page-container__center__header">
         Small Step Big Smile
       </h1>
       <input type="text" class="app-top-page-container__center__search-bar">
     </div>
-    <button class="app-top-page-container__cart">
+    <!-- <button class="app-top-page-container__cart">
       Cart
-    </button>
+    </button> -->
   </div>
 </template>
 
@@ -28,21 +28,22 @@ export default {
   background: $cayn;
   align-items: center;
 
-  &__counter {
-    width: 15%;
-    height: 40px;
-    padding: 9px;
-    text-align: center;
-    font-size: 20px;
-    background-color: gray;
-    margin: 1%;
-  }
+  // &__counter {
+  //   width: 15%;
+  //   height: 40px;
+  //   padding: 9px;
+  //   text-align: center;
+  //   font-size: 20px;
+  //   background-color: gray;
+  //   margin: 1%;
+  // }
 
   &__center {
     width: 70%;
     align-items: center;
     @include flex-column;
-    margin: 1%;
+    margin: 1% auto;
+    text-align: center;
 
     &__header {
       text-align: center;
@@ -63,17 +64,17 @@ export default {
     }
   }
 
-  &__cart {
-    width: 15%;
-    font-size: 20px;
-    text-align: center;
-    margin: 1%;
-    background-color: gray;
-    font-family: $heebo-font-family;
-    &:focus {
-      outline:0;
-    }
-  }
+  // &__cart {
+  //   width: 15%;
+  //   font-size: 20px;
+  //   text-align: center;
+  //   margin: 1%;
+  //   background-color: gray;
+  //   font-family: $heebo-font-family;
+  //   &:focus {
+  //     outline:0;
+  //   }
+  // }
 }
 
 </style>
