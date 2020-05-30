@@ -113,7 +113,8 @@ export default {
     width: 30%;
     text-align: center;
     margin: 1%;
-    padding: 1%;
+    padding: 0.3%;
+    background: $light-orange;
   }
 }
 

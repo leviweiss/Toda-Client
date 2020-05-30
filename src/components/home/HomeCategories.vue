@@ -19,7 +19,6 @@ const Business = require('../../assets/business.png');
 const AlternativeMedicine = require('../../assets/alternative-medicine.png');
 const FashionBeauty = require('../../assets/fashion&beauty.png');
 
-
 export default {
   name: 'home-categories',
   computed: {
@@ -63,7 +62,6 @@ export default {
     margin-right: 1%;
     margin-left: 1%;
     background: $light-orange;
-    padding: 1%;
 
     &:hover {
       opacity: 1;
