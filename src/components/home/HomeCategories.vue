@@ -15,7 +15,9 @@ const PleasureAndVacation = require('../../assets/pleasure&vacation.png');
 const Professional = require('../../assets/professional.png');
 const Store = require('../../assets/store.png');
 const TakeawayAndRestaurant = require('../../assets/takeaway&restaurant.png');
-// const Business = require('../../assets/business.png');
+const Business = require('../../assets/business.png');
+const AlternativeMedicine = require('../../assets/alternative-medicine.png');
+const FashionBeauty = require('../../assets/fashion&beauty.png');
 
 
 export default {
@@ -31,9 +33,9 @@ export default {
         Professional,
         Store,
         TakeawayAndRestaurant,
-        PleasureAndVacation,
-        Professional,
-        Store];
+        AlternativeMedicine,
+        Business,
+        FashionBeauty];
     },
   },
   methods: {

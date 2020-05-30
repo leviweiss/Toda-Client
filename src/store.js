@@ -24,7 +24,7 @@ export default new Vuex.Store({
       },
       {
         id: 3,
-        name: 'professional', //
+        name: 'professional',
       },
       {
         id: 4,
@@ -32,15 +32,15 @@ export default new Vuex.Store({
       },
       {
         id: 5,
-        name: 'store', //
+        name: 'store',
       },
       {
         id: 6,
-        name: 'takeaway&restaurant', //
+        name: 'takeaway&restaurant',
       },
       {
         id: 7,
-        name: 'pleasure&vacation', //
+        name: 'pleasure&vacation',
       },
     ],
   },
