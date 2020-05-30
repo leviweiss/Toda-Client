@@ -40,7 +40,7 @@ export default {
   @include flex-row;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  background: linear-gradient(to bottom, $cayn 50%, white 50%);
 
   &__category {
     width: (100% / 8) - 4%;
