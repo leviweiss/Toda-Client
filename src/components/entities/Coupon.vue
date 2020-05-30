@@ -8,6 +8,9 @@
         {{ processesDescription }}
       </div>
       <div class="coupon-container__info__prices">
+        <div class="coupon-container__info__prices__price-name">
+          price:
+        </div>
         <div class="coupon-container__info__prices__price-now">
           {{ priceNow }}
         </div>
@@ -63,7 +66,7 @@ export default {
     justify-content: space-between;
 
     &__name {
-      text-align: left;
+      text-align: center;
       border: solid 3px green;
       margin: 1%;
       padding: 1%;
@@ -86,15 +89,27 @@ export default {
       justify-content: center;
       align-items: center;
       border: solid 3px green;
-      margin: 1%;
       padding: 1%;
+      margin: 1%;
+
+      &__price-name {
+        border: solid 3px red;
+        font-size: $small-medium-font;
+        margin-right: 3%;
+      }
 
       &__price-now {
         border: solid 3px red;
+        font-size: $small-medium-font;
+        margin-left: 3%;
+        margin-right: 3%;
       }
 
       &__price-before {
         border: solid 3px red;
+        font-size: $small-medium-font;
+        margin-left: 3%;
+        text-decoration: line-through;
       }
     }
   }

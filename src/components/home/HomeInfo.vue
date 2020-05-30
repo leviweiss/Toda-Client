@@ -30,21 +30,21 @@ export default {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
   }
 
   &__buttons {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
   }
 
   &__dropdowns {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
   }
 }
 
