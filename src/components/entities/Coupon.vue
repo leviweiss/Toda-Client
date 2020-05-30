@@ -1,5 +1,6 @@
 <template>
   <div id="coupon" class="coupon-container">
+    <img :src="image" alt="NotFound" class="coupon-container__image"/>
     <div class="coupon-container__info">
       <div class="coupon-container__info__name">
         {{ name }}
@@ -19,7 +20,6 @@
         </div>
       </div>
     </div>
-    <img :src="image" alt="NotFound" class="coupon-container__image"/>
   </div>
 </template>
 
@@ -59,12 +59,19 @@ export default {
   border-radius: 5px;
   box-shadow: 0 0px 8px rgb(0, 0, 0);
 
+  &__image {
+    width: 35%;
+    text-align: center;
+    margin: 1%;
+    padding: 0.3%;
+    background: $light-orange;
+  }
+
   &__info {
     width: 65%;
     @include flex-column;
     justify-content: space-between;
-    border-right: thick solid $light-medium-grey;
-    border-left: 4px solid $cayn;
+    border-right: 4px solid $cayn;
 
     &__name {
       text-align: center;
@@ -115,14 +122,5 @@ export default {
       }
     }
   }
-
-  &__image {
-    width: 35%;
-    text-align: center;
-    margin: 1%;
-    padding: 0.3%;
-    background: $light-orange;
-  }
 }
-
 </style>

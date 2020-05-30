@@ -8,7 +8,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     chosenCategory: 1,
-    chosenHomeButton: 'business',
+    chosenHomeButton: 'coupon',
     filter1Value: undefined,
     showCouponModal: false,
     couponModalToShow: undefined,

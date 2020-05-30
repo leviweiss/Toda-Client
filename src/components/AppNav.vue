@@ -52,6 +52,7 @@ export default {
     width: 8%;
     cursor: pointer;
     margin-right: 5%;
+    margin-left: 1%;
   }
 
   &__links {
