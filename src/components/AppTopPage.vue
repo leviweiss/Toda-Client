@@ -57,6 +57,9 @@ export default {
       font-size: $medium-font;
       margin: 1%;
       width: 50%;
+      &:focus {
+        outline:0;
+      }
     }
   }
 
@@ -67,6 +70,9 @@ export default {
     margin: 1%;
     background-color: gray;
     font-family: $comic-font-family;
+    &:focus {
+      outline:0;
+    }
   }
 }
 
