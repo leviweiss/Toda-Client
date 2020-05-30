@@ -3,7 +3,7 @@ function getData() {
   for (let i = 0; i < 10; i += 1) {
     coupons.push({
       name: `name${i}`,
-      description: `description${i}`,
+      description: `description${i} `.repeat(10),
       priceNow: `${i}`,
       priceBefore: `${i}`,
     });
@@ -12,7 +12,7 @@ function getData() {
   for (let i = 0; i < 10; i += 1) {
     businesses.push({
       name: `name${i}`,
-      description: `description${i}`,
+      description: `description${i} `.repeat(10),
       priceNow: `${i}`,
       priceBefore: `${i}`,
     });

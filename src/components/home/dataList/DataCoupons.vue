@@ -55,6 +55,9 @@ export default {
 
   &__coupon {
     margin-bottom: 3%;
+    width: (100% / 3) - 5%;
+    margin-right: 1%;
+    margin-left: 1%;
   }
 }
 

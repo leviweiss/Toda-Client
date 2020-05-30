@@ -42,7 +42,7 @@ export default {
   width: 90%;
 
   &__category {
-    width: (100% / 8) - 5%;
+    width: (100% / 8) - 3%;
     text-align: center;
     border: solid 3px $basic-blue;
     border-radius: $small-border-radius;

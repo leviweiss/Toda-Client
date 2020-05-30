@@ -5,7 +5,7 @@
         {{ name }}
       </div>
       <div class="coupon-container__info__description">
-        {{ description }}
+        {{ processesDescription }}
       </div>
       <div class="coupon-container__info__prices">
         <div class="coupon-container__info__prices__price-now">
@@ -35,6 +35,13 @@ export default {
   computed: {
     image() {
       return Businesses;
+    },
+    processesDescription() {
+      const maxLength = 60;
+      if (this.description.length > maxLength) {
+        return `${this.description.substring(0, maxLength)}...`;
+      }
+      return this.description;
     },
   },
 };
@@ -69,6 +76,8 @@ export default {
       border: solid 3px green;
       margin: 1%;
       padding: 1%;
+      flex: 1;
+      font-size: $small-font;
     }
 
     &__prices {
