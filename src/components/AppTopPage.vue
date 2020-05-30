@@ -47,14 +47,16 @@ export default {
     &__header {
       text-align: center;
       color: white;
-      font-size: 20px;
+      font-size: $medium-large-font;
       margin: 1%;
     }
 
     &__search-bar {
       text-align: center;
-      font-size: 10px;
+      border-radius: 30px;
+      font-size: $medium-font;
       margin: 1%;
+      width: 50%;
     }
   }
 

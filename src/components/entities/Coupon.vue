@@ -57,12 +57,14 @@ export default {
   cursor: pointer;
   background-color: $light-grey;
   border-radius: 5px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.795);
+  box-shadow: 0 0px 8px rgb(0, 0, 0);
 
   &__info {
     width: 70%;
     @include flex-column;
     justify-content: space-between;
+    border-right: thick solid $light-medium-grey;
+    border-left: 4px solid $cayn;
 
     &__name {
       text-align: center;
