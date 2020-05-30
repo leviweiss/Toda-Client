@@ -40,7 +40,7 @@ export default {
       return Businesses;
     },
     processesDescription() {
-      const maxLength = 60;
+      const maxLength = 80;
       if (this.description.length > maxLength) {
         return `${this.description.substring(0, maxLength)}...`;
       }
@@ -55,7 +55,6 @@ export default {
   width: 100%;
   @include flex-row;
   cursor: pointer;
-  border: solid 3px red;
   background-color: $light-grey;
   border-radius: 5px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.795);
@@ -67,7 +66,6 @@ export default {
 
     &__name {
       text-align: center;
-      border: solid 3px green;
       margin: 1%;
       padding: 1%;
       font-size: $medium-font;
@@ -76,9 +74,8 @@ export default {
 
     &__description {
       text-align: center;
-      border: solid 3px green;
       margin: 1%;
-      padding: 1%;
+      padding: 6% 0;
       flex: 1;
       font-size: $small-font;
     }
@@ -88,25 +85,21 @@ export default {
       @include flex-row;
       justify-content: center;
       align-items: center;
-      border: solid 3px green;
       padding: 1%;
       margin: 1%;
 
       &__price-name {
-        border: solid 3px red;
         font-size: $small-medium-font;
         margin-right: 3%;
       }
 
       &__price-now {
-        border: solid 3px red;
         font-size: $small-medium-font;
         margin-left: 3%;
         margin-right: 3%;
       }
 
       &__price-before {
-        border: solid 3px red;
         font-size: $small-medium-font;
         margin-left: 3%;
         text-decoration: line-through;
@@ -117,7 +110,6 @@ export default {
   &__image {
     width: 30%;
     text-align: center;
-    border: solid 3px green;
     margin: 1%;
     padding: 1%;
   }

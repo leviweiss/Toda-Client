@@ -30,12 +30,12 @@
   width: 12%;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: $mild-blue;
+  background-color: $cayn;
   color: white;
   cursor: pointer;
   opacity: 0.5;
   &:hover, &--active {
-    background-color: $basic-blue;
+    background-color: $blue;
     opacity: 1;
   }
 }
@@ -68,6 +68,12 @@ $light-grey: #f6f6f6;
 $light-medium-grey: rgb(211,211,211);
 $medium-grey: rgb(169,169,169);
 $dark-grey: rgb(104,104,104);
+
+$blue: rgb(47, 93, 125);
+$cayn: rgb(155, 214, 203);
+$light-gray: rgb(244, 244, 244);
+$orange: rgb(242, 103, 40);
+$light-orange: rgb(248, 158, 112);
 
 // fonts sizes
 $extra-large-font: 48px;
