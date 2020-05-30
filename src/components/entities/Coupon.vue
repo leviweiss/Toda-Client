@@ -8,10 +8,10 @@
         {{ description }}
       </div>
       <div class="coupon-container__info__prices">
-        <div class="coupon-container__info__price-now">
+        <div class="coupon-container__info__prices__price-now">
           {{ priceNow }}
         </div>
-        <div class="coupon-container__info__price-before">
+        <div class="coupon-container__info__prices__price-before">
           {{ priceBefore }}
         </div>
       </div>
@@ -44,21 +44,24 @@ export default {
 .coupon-container {
   width: 100%;
   @include flex-row;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   border: solid 3px red;
-  background: $blue-linear-gradient;
+  background-color: $light-grey;
+  border-radius: 5px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.795);
 
   &__info {
     width: 70%;
     @include flex-column;
+    justify-content: space-between;
 
     &__name {
-      text-align: center;
+      text-align: left;
       border: solid 3px green;
       margin: 1%;
       padding: 1%;
+      font-size: $medium-font;
+      font-weight: bold;
     }
 
     &__description {
@@ -78,11 +81,11 @@ export default {
       padding: 1%;
 
       &__price-now {
-        border: solid 3px green;
+        border: solid 3px red;
       }
 
       &__price-before {
-        border: solid 3px green;
+        border: solid 3px red;
       }
     }
   }

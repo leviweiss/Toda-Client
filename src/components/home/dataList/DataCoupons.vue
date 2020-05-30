@@ -52,6 +52,10 @@ export default {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
+
+  &__coupon {
+    margin-bottom: 3%;
+  }
 }
 
 </style>
