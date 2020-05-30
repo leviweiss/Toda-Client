@@ -5,12 +5,12 @@
       <router-link to="/" class="app-nav-container__links__home">
         Home
       </router-link>
-      <router-link to="coupons" class="app-nav-container__links__coupons">
+      <!-- <router-link to="coupons" class="app-nav-container__links__coupons">
         Coupons
       </router-link>
       <router-link to="businesses" class="app-nav-container__links__businesses">
         Businesses
-      </router-link>
+      </router-link> -->
       <router-link to="about-us" class="app-nav-container__links__about-us">
         About-Us
       </router-link>

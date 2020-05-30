@@ -20,10 +20,6 @@ export default {
 
 <style lang="scss">
 .app-home-container {
-  &__top-page {
-    // margin-bottom: 1%;
-  }
-
   &__home-info {
     margin-bottom: 1%;
   }
