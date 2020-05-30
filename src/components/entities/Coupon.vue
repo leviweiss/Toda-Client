@@ -60,7 +60,7 @@ export default {
   box-shadow: 0 0px 8px rgb(0, 0, 0);
 
   &__info {
-    width: 70%;
+    width: 65%;
     @include flex-column;
     justify-content: space-between;
     border-right: thick solid $light-medium-grey;
@@ -72,6 +72,7 @@ export default {
       padding: 1%;
       font-size: $medium-font;
       font-weight: bold;
+      color: $blue;
     }
 
     &__description {
@@ -93,24 +94,30 @@ export default {
       &__price-name {
         font-size: $small-medium-font;
         margin-right: 3%;
+        color: $blue;
+        font-weight: bold;
       }
 
       &__price-now {
         font-size: $small-medium-font;
         margin-left: 3%;
         margin-right: 3%;
+        color: $blue;
+        font-weight: bold;
       }
 
       &__price-before {
         font-size: $small-medium-font;
         margin-left: 3%;
         text-decoration: line-through;
+        color: $orange;
+        font-weight: bold;
       }
     }
   }
 
   &__image {
-    width: 30%;
+    width: 35%;
     text-align: center;
     margin: 1%;
     padding: 0.3%;
