@@ -55,7 +55,6 @@ export default {
   &__category {
     width: (100% / 7) - 5%;
     text-align: center;
-    border: solid 2px $basic-blue;
     border-radius: 50%;
     cursor: pointer;
     opacity: 0.5;

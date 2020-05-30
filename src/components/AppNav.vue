@@ -1,6 +1,6 @@
 <template>
   <nav id="app-nav" class="app-nav-container">
-    <img src="../assets/logo.png" class="app-nav-container__logo" @click="goToHome"/>
+    <img src="../assets/todaLogo.png" class="app-nav-container__logo" @click="goToHome"/>
     <div class="app-nav-container__links">
       <router-link to="/" class="app-nav-container__links__home">
         Home
