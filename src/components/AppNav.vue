@@ -44,7 +44,7 @@ export default {
   background: $blue;
   @include flex-row;
   align-items: center;
-  font-family: $comic-font-family;
+  font-family: $heebo-font-family;
   padding: 1.0%;
 
   &__logo {

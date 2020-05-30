@@ -24,7 +24,7 @@
 </template>
 
 <script>
-const Businesses = require('../../assets/Businesses.png');
+const Business = require('../../assets/business.png');
 
 export default {
   name: 'coupon',
@@ -37,7 +37,7 @@ export default {
   },
   computed: {
     image() {
-      return Businesses;
+      return Business;
     },
     processesDescription() {
       const maxLength = 80;

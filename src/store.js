@@ -7,7 +7,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    chosenCategory: 3,
+    chosenCategory: 1,
     chosenHomeButton: 'coupon',
     filter1Value: undefined,
     showCouponModal: false,
@@ -16,35 +16,31 @@ export default new Vuex.Store({
     categories: [
       {
         id: 1,
-        name: 'Businesses',
+        name: 'business',
       },
       {
         id: 2,
-        name: 'Fashion&Beauty',
+        name: 'fashion&beauty',
       },
       {
         id: 3,
-        name: 'Professionals',
+        name: 'professional', //
       },
       {
         id: 4,
-        name: 'Alternative-Medicine',
+        name: 'alternative-medicine',
       },
       {
         id: 5,
-        name: 'Stores',
+        name: 'store', //
       },
       {
         id: 6,
-        name: 'Restaurant',
+        name: 'takeaway&restaurant', //
       },
       {
         id: 7,
-        name: 'Home-Decoration',
-      },
-      {
-        id: 8,
-        name: 'Pleasure&Vacation',
+        name: 'pleasure&vacation', //
       },
     ],
   },

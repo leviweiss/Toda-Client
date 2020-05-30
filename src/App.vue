@@ -31,7 +31,7 @@ export default {
 
 .app-container {
   @include flex-column;
-  font-family: $comic-font-family;
+  font-family: $heebo-font-family;
 
   &__main {
     margin-bottom: 5%;

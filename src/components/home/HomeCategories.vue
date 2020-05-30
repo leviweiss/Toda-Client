@@ -3,7 +3,7 @@
     <div class="home-categories-container__category" v-for="category in categories" :key="category.id"
     @click="setChosenCategory(category.id)"
     :class="{'home-categories-container__category--chosen': chosenCategory === category.id}">
-      <img :src="images[category.id]" alt="NotFound" class="home-categories-container__category__image"/>
+      <img :src="images[category.id - 1]" alt="NotFound" class="home-categories-container__category__image"/>
     </div>
   </div>
 </template>
@@ -11,9 +11,12 @@
 <script>
 import { mapState, mapActions } from 'vuex';
 
-const Businesses = require('../../assets/Businesses.png');
-// const Fashion = require('../../assets/Fashion&Beauty.png');
-// const Tourism = require('../../assets/Tourism&Vacation.png');
+const PleasureAndVacation = require('../../assets/pleasure&vacation.png');
+const Professional = require('../../assets/professional.png');
+const Store = require('../../assets/store.png');
+const TakeawayAndRestaurant = require('../../assets/takeaway&restaurant.png');
+// const Business = require('../../assets/business.png');
+
 
 export default {
   name: 'home-categories',
@@ -23,8 +26,14 @@ export default {
       categories: (state) => state.categories,
     }),
     images() {
-      return [Businesses, Businesses, Businesses, Businesses,
-        Businesses, Businesses, Businesses, Businesses, Businesses];
+      return [
+        PleasureAndVacation,
+        Professional,
+        Store,
+        TakeawayAndRestaurant,
+        PleasureAndVacation,
+        Professional,
+        Store];
     },
   },
   methods: {
@@ -43,7 +52,7 @@ export default {
   background: linear-gradient(to bottom, $cayn 50%, white 50%);
 
   &__category {
-    width: (100% / 8) - 4%;
+    width: (100% / 7) - 5%;
     text-align: center;
     border: solid 2px $basic-blue;
     border-radius: 50%;

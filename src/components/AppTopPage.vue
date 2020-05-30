@@ -69,7 +69,7 @@ export default {
     text-align: center;
     margin: 1%;
     background-color: gray;
-    font-family: $comic-font-family;
+    font-family: $heebo-font-family;
     &:focus {
       outline:0;
     }
