@@ -15,8 +15,12 @@
               <div class="modal-container__info__details__description">
                 {{ processesDescription }}
               </div>
-              <div class="modal-container__info__details__phone-number">
-                {{ couponModalToShow.phoneNumber }}
+              <div class="modal-container__info__details__phone">
+                <img src="../../assets/couponModal/phone.png" alt="NotFound"
+                class="modal-container__info__details__phone__icon"/>
+                <div class="modal-container__info__details__phone__number">
+                  {{ couponModalToShow.phoneNumber }}
+                </div>
               </div>
               <div class="modal-container__info__details__address">
                 {{ couponModalToShow.address }}
@@ -136,22 +140,35 @@ export default {
         font-size: $medium-large-font;
         font-weight: bold;
         color: $blue;
+        border: solid 3px red;
       }
 
       &__description {
         font-size: $small-medium-font;
+        border: solid 3px red;
       }
 
-      &__phone-number {
+      &__phone {
+        @include flex-row;
 
+        &__icon {
+          width: 10%;
+          border: solid 3px red;
+        }
+
+        &__number {
+          border: solid 3px red;
+          padding: 1%;
+        }
       }
+
 
       &__address {
 
       }
 
       &__link-to-business-home-page {
-        
+
       }
     }
   }
