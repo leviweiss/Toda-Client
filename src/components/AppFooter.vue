@@ -1,7 +1,7 @@
 <template>
   <div id="app-footer" class="app-footer-container">
     <footer class="app-footer-container__main">
-      Contact
+      This website was developed by students who care. Toda, digitally transformation for SMBs
     </footer>
   </div>
 </template>
@@ -23,6 +23,7 @@ export default {
     padding: 0.7%;
     width: 100%;
     color: white;
+    font-weight: bold;
   }
 }
 </style>

@@ -71,6 +71,10 @@ export default new Vuex.Store({
       const businesses = getters.allBusinessesInfo.filter((b) => b.id >= parseInt(businessId, 10));
       return businesses;
     },
+    getBusinessById: (state, getters) => (businessId) => {
+      const business = getters.allBusinessesInfo.find((b) => b.id === parseInt(businessId, 10));
+      return business;
+    },
   },
   actions: {
     setChosenCategory({ commit }, categoryId) {

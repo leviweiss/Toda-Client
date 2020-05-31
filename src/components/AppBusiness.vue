@@ -3,9 +3,10 @@
     <div class="app-business-container__top">
       <img src="../assets/business.png" alt="NotFound" class="app-business-container__top__image"/>
       <div class="app-business-container__top__about">
+        {{ getBusinessById(businessId).description }}
       </div>
     </div>
-    <data-coupons v-bind:coupons="getCouponsByBusinessId(this.$route.params.id)"
+    <data-coupons v-bind:coupons="getCouponsByBusinessId(businessId)"
     class="app-business-container__bottom"/>
   </div>
 </template>
@@ -19,12 +20,18 @@ import DataCoupons from './home/dataList/DataCoupons.vue';
 
 export default {
   name: 'app-business',
+  data() {
+    return {
+      businessId: this.$route.params.id,
+    };
+  },
   components: {
     DataCoupons,
   },
   computed: {
     ...mapGetters({
       getCouponsByBusinessId: 'getCouponsByBusinessId',
+      getBusinessById: 'getBusinessById',
     }),
   },
 };
@@ -38,15 +45,19 @@ export default {
 
   &__top {
     margin: 2%;
+    text-align: center;
 
     &__image {
       width: 30%;
       margin: 2%;
+      text-align: center;
     }
 
     &__about {
       margin: 2%;
       font-size: $medium-font;
+      width: 30%;
+      text-align: center;
     }
 
   }
