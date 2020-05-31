@@ -1,7 +1,5 @@
 <template>
   <div id="app" class="app-container">
-    <div>TITLE: {{ title }}</div>
-    <div>NODE_ENV: {{ NODE_ENV }}</div>
     <header class="app-container__header">
       <app-nav/>
     </header>
