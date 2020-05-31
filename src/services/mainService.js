@@ -1,5 +1,7 @@
 import getCategories from './utils';
 
+let id = 1;
+
 function addCoupon(coupon) {
   // eslint-disable-next-line no-console
   console.log(coupon);
@@ -17,6 +19,8 @@ function createCategoryData(catagoryName, numberOfElements) {
   const coupons = [];
   for (let i = 0; i < numberOfElements; i += 1) {
     coupons.push({
+      // eslint-disable-next-line no-plusplus
+      id: id++,
       name: `${catagoryName.charAt(0)}_name${i}`,
       description: `description${i} `.repeat(10),
       priceNow: `7${i}`,
@@ -28,6 +32,8 @@ function createCategoryData(catagoryName, numberOfElements) {
   const businesses = [];
   for (let i = 0; i < numberOfElements; i += 1) {
     businesses.push({
+      // eslint-disable-next-line no-plusplus
+      id: id++,
       name: `${catagoryName.charAt(0)}_name${i}`,
       description: `description${i} `.repeat(10),
     });

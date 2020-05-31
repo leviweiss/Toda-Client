@@ -2,6 +2,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import { getData } from './services/mainService';
+import getCategories from './services/utils';
 
 Vue.use(Vuex);
 
@@ -50,6 +51,11 @@ export default new Vuex.Store({
         allBusinessesInfo = allBusinessesInfo.concat(state.data.catagories[i].businesses);
       }
       return allBusinessesInfo;
+    },
+    couponsByCategory: (state) => {
+      const categoryName = getCategories().find((c) => c.id === state.chosenCategory).name;
+      const category = state.data.catagories.find((c) => c.name === categoryName);
+      return category.coupons;
     },
   },
   actions: {

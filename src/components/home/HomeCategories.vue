@@ -10,6 +10,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
+import getCategories from '../../services/utils';
 
 const PleasureAndVacation = require('../../assets/pleasure&vacation.png');
 const Professional = require('../../assets/professional.png');
@@ -21,10 +22,14 @@ const FashionBeauty = require('../../assets/fashion&beauty.png');
 
 export default {
   name: 'home-categories',
+  data() {
+    return {
+      categories: getCategories(),
+    };
+  },
   computed: {
     ...mapState({
       chosenCategory: (state) => state.chosenCategory,
-      categories: (state) => state.categories,
     }),
     images() {
       return [

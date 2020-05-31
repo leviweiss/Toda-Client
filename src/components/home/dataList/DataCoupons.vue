@@ -1,6 +1,6 @@
 <template>
   <div id="data-coupons" class="data-coupons-container">
-    <div class="data-coupons-container__coupon" v-for="coupon in allCouponsInfo" :key="coupon.id"
+    <div class="data-coupons-container__coupon" v-for="coupon in couponsByCategory" :key="coupon.id"
     @click="openCouponModal(coupon)">
       <coupon v-bind="coupon"/>
     </div>
@@ -34,6 +34,7 @@ export default {
     }),
     ...mapGetters({
       allCouponsInfo: 'allCouponsInfo',
+      couponsByCategory: 'couponsByCategory',
     }),
   },
   methods: {
