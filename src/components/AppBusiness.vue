@@ -48,14 +48,14 @@ export default {
     text-align: center;
 
     &__image {
-      width: 20%;
+      width: 40%;
       text-align: center;
     }
 
     &__about {
       margin: 1% auto 2%;
       font-size: $medium-font;
-      width: 40%;
+      width: 50%;
     }
   }
 
