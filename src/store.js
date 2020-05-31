@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { getData } from './services/mainService';
+import { getData } from './services/backendRequests';
 import getCategories from './services/utils';
 
 Vue.use(Vuex);

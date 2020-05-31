@@ -1,5 +1,7 @@
 <template>
   <div id="app" class="app-container">
+    <div>TITLE: {{ title }}</div>
+    <div>NODE_ENV: {{ NODE_ENV }}</div>
     <header class="app-container__header">
       <app-nav/>
     </header>
@@ -17,7 +19,13 @@ import AppFooter from './components/AppFooter.vue';
 export default {
   name: 'App',
   mounted() {
-    document.title = 'Toda';
+    document.title = process.env.VUE_APP_TITLE || 'App';
+  },
+  data() {
+    return {
+      title: process.env.TITLE,
+      NODE_ENV: process.env.NODE_ENV,
+    };
   },
   components: {
     AppNav,
