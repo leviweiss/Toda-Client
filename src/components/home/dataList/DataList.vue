@@ -1,12 +1,12 @@
 <template>
   <div id="data-list" class="data-list-container">
-    <data-coupons v-show="chosenHomeButton === 'coupon'"/>
+    <data-coupons v-bind:coupons="couponsByCategory" v-show="chosenHomeButton === 'coupon'"/>
     <data-businesses v-show="chosenHomeButton === 'business'"/>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 import DataBusinesses from './DataBusinesses.vue';
 import DataCoupons from './DataCoupons.vue';
 
@@ -19,6 +19,9 @@ export default {
   computed: {
     ...mapState({
       chosenHomeButton: (state) => state.chosenHomeButton,
+    }),
+    ...mapGetters({
+      couponsByCategory: 'couponsByCategory',
     }),
   },
 };

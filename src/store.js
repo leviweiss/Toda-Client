@@ -67,6 +67,10 @@ export default new Vuex.Store({
       const category = state.data.catagories.find((c) => c.name === categoryName);
       return category.coupons;
     },
+    getCouponsByBusinessId: (state, getters) => (businessId) => {
+      const businesses = getters.allBusinessesInfo.filter((b) => b.id >= parseInt(businessId, 10));
+      return businesses;
+    },
   },
   actions: {
     setChosenCategory({ commit }, categoryId) {

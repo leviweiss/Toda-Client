@@ -1,6 +1,8 @@
 import getCategories from './utils';
+// const axios = require('axios');
 
-let id = 1;
+let couponId = 1;
+let businessId = 1000;
 
 function addCoupon(coupon) {
   // eslint-disable-next-line no-console
@@ -20,20 +22,21 @@ function createCategoryData(catagoryName, numberOfElements) {
   for (let i = 0; i < numberOfElements; i += 1) {
     coupons.push({
       // eslint-disable-next-line no-plusplus
-      id: id++,
+      id: couponId++,
       name: `${catagoryName.charAt(0)}_name${i}`,
       description: `description${i} `.repeat(10),
       priceNow: `7${i}`,
       priceBefore: `9${i}`,
       phoneNumber: getRandomPhoneNumber(),
       address: 'Tel Aviv, King George 68, Isreal',
+      businessId: 1000,
     });
   }
   const businesses = [];
   for (let i = 0; i < numberOfElements; i += 1) {
     businesses.push({
       // eslint-disable-next-line no-plusplus
-      id: id++,
+      id: businessId++,
       name: `${catagoryName.charAt(0)}_name${i}`,
       description: `description${i} `.repeat(10),
     });
@@ -53,6 +56,16 @@ function getData() {
   for (let index = 0; index < categories.length; index += 1) {
     data.catagories.push(createCategoryData(categories[index].name, 10 + index));
   }
+
+  // const url = `${process.env.VUE_APP_BACKEND_URL}/coupon`;
+  // let data;
+  // axios.get(url, {
+  //   crossdomain: true,
+  //   // eslint-disable-next-line no-return-assign
+  // }).then((response) => {
+  //   data = response;
+  //   console.log(response);
+  // });
 
   return data;
 }

@@ -29,7 +29,8 @@
                   {{ couponModalToShow.address }}
                 </div>
               </div>
-              <button class="modal-container__info__details__link-to-business-home-page">
+              <button class="modal-container__info__details__link-to-business-home-page"
+              @click.prevent="linkToBusinessHomePageClick">
                 Business Page
               </button>
             </div>
@@ -95,6 +96,10 @@ export default {
       this.$emit('close');
     },
     closeElementClick() {
+      this.$emit('close');
+    },
+    linkToBusinessHomePageClick() {
+      this.$router.push({ path: `/business/${this.couponModalToShow.businessId}` });
       this.$emit('close');
     },
   },

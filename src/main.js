@@ -4,9 +4,8 @@ import Store from './store';
 import App from './App.vue';
 
 import AppHome from './components/AppHome.vue';
-import AppCoupons from './components/AppCoupons.vue';
-import AppBusinesses from './components/AppBusinesses.vue';
 import AppAboutUs from './components/AppAboutUs.vue';
+import AppBusiness from './components/AppBusiness.vue';
 
 const bus = new Vue();
 export default bus;
@@ -16,9 +15,8 @@ Vue.config.productionTip = false;
 Vue.use(VueRouter);
 const routes = [
   { path: '/', component: AppHome },
-  { path: '/coupons', component: AppCoupons },
-  { path: '/businesses', component: AppBusinesses },
   { path: '/about-us', component: AppAboutUs },
+  { path: '/business/:id', component: AppBusiness },
 ];
 
 const router = new VueRouter({

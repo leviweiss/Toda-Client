@@ -1,6 +1,6 @@
 <template>
   <div id="data-coupons" class="data-coupons-container">
-    <div class="data-coupons-container__coupon" v-for="coupon in couponsByCategory" :key="coupon.id"
+    <div class="data-coupons-container__coupon" v-for="coupon in coupons" :key="coupon.id"
     @click="openCouponModal(coupon)">
       <coupon v-bind="coupon"/>
     </div>
@@ -21,6 +21,7 @@ import CouponModal from '../../entities/CouponModal.vue';
 
 export default {
   name: 'data-coupons',
+  props: ['coupons'],
   components: {
     Coupon,
     CouponModal,
