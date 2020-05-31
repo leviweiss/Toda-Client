@@ -13,6 +13,8 @@ export default new Vuex.Store({
     filter1Value: undefined,
     showCouponModal: false,
     couponModalToShow: undefined,
+    showBusinessModal: false,
+    businessModalToShow: undefined,
     data: undefined,
   },
   mutations: {
@@ -32,6 +34,14 @@ export default new Vuex.Store({
     CLOSE_COUPON_MODAL(state) {
       state.couponModalToShow = undefined;
       state.showCouponModal = false;
+    },
+    OPEN_BUSINESS_MODAL(state, coupon) {
+      state.businessModalToShow = coupon;
+      state.showBusinessModal = true;
+    },
+    CLOSE_BUSINESS_MODAL(state) {
+      state.businessModalToShow = undefined;
+      state.showBusinessModal = false;
     },
     SET_DATA(state, data) {
       state.data = data;
@@ -73,6 +83,12 @@ export default new Vuex.Store({
     },
     closeCouponModal({ commit }) {
       commit('CLOSE_COUPON_MODAL');
+    },
+    openBusinessModal({ commit }, coupon) {
+      commit('OPEN_BUSINESS_MODAL', coupon);
+    },
+    closeBusinessModal({ commit }) {
+      commit('CLOSE_BUSINESS_MODAL');
     },
     getAllData({ commit }) {
       const data = getData();
