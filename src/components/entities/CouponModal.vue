@@ -142,7 +142,6 @@ export default {
 
       &__description {
         font-size: $small-medium-font;
-        font-size: 100%;
       }
 
       &__phone {
@@ -156,7 +155,7 @@ export default {
         &__number {
           padding: 1%;
           font-size: $medium-font;
-          font-size: 100%;
+          width: 90%;
         }
       }
 
@@ -171,7 +170,7 @@ export default {
         &__name {
           padding: 1%;
           font-size: $medium-font;
-          font-size: 100%;
+          width: 90%;
         }
       }
 
@@ -180,7 +179,7 @@ export default {
         width: 50%;
         padding-top: 2%;
         padding-bottom: 2%;
-        font-size: 100%;
+        // font-size: 100%;
         border: none;
         cursor: pointer;
         &:focus {
