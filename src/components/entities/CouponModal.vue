@@ -47,7 +47,7 @@
           </div>
           <div class="modal-container__buttons">
             <button class="modal-container__buttons__pay">
-              Pay
+              Checkout
             </button>
             <button class="modal-container__buttons__add-to-chart">
               Add To Chart
@@ -130,7 +130,6 @@ export default {
     &__details {
       width: 60%;
       margin-left: 0.5%;
-      padding: 0.5%;
       @include flex-column;
       justify-content: space-between;
 
@@ -179,7 +178,7 @@ export default {
         width: 50%;
         padding-top: 2%;
         padding-bottom: 2%;
-        // font-size: 100%;
+        font-size: $medium-font;
         border: none;
         cursor: pointer;
         &:focus {
