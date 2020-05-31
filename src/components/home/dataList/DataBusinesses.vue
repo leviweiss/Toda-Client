@@ -25,9 +25,6 @@ export default {
     Business,
     BusinessModal,
   },
-  beforeMount() {
-    return this.getAllData();
-  },
   computed: {
     ...mapState({
       showBusinessModal: (state) => state.showBusinessModal,
@@ -40,7 +37,6 @@ export default {
     ...mapActions([
       'openBusinessModal',
       'closeBusinessModal',
-      'getAllData',
     ]),
   },
 };

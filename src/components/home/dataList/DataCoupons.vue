@@ -25,9 +25,6 @@ export default {
     Coupon,
     CouponModal,
   },
-  beforeMount() {
-    return this.getAllData();
-  },
   computed: {
     ...mapState({
       showCouponModal: (state) => state.showCouponModal,
@@ -41,7 +38,6 @@ export default {
     ...mapActions([
       'openCouponModal',
       'closeCouponModal',
-      'getAllData',
     ]),
   },
 };

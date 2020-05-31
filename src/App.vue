@@ -11,23 +11,25 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 import AppNav from './components/AppNav.vue';
 import AppFooter from './components/AppFooter.vue';
 
 export default {
   name: 'App',
-  mounted() {
+  beforeMount() {
     document.title = process.env.VUE_APP_TITLE || 'App';
-  },
-  data() {
-    return {
-      title: process.env.TITLE,
-      NODE_ENV: process.env.NODE_ENV,
-    };
+    return this.getAllData();
   },
   components: {
     AppNav,
     AppFooter,
+  },
+  methods: {
+    ...mapActions([
+      'getAllData',
+    ]),
   },
 };
 </script>
