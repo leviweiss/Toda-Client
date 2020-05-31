@@ -16,6 +16,9 @@ import AppFooter from './components/AppFooter.vue';
 
 export default {
   name: 'App',
+  mounted() {
+    document.title = 'Toda';
+  },
   components: {
     AppNav,
     AppFooter,
