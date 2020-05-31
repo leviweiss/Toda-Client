@@ -50,8 +50,8 @@
             <button class="modal-container__buttons__pay">
               Checkout
             </button>
-            <button class="modal-container__buttons__add-to-chart">
-              Add To Chart
+            <button class="modal-container__buttons__add-to-cart">
+              Add To Cart
             </button>
           </div>
         </div>
@@ -127,7 +127,7 @@ export default {
 
     &__image {
       width: 40%;
-      margin-right: 0.5%;
+      margin-right: 3%;
       padding: 0.5%;
       background: $light-orange;
     }
@@ -146,13 +146,17 @@ export default {
 
       &__description {
         font-size: $small-medium-font;
+        padding: 10% 0 5%;
+        margin-bottom: 5%;
       }
 
       &__phone {
         @include flex-row;
+        align-items: center;
 
         &__icon {
-          width: 10%;
+          width: 7%;
+          height: 70%;
           margin-right: 1%;
         }
 
@@ -165,9 +169,11 @@ export default {
 
       &__address {
         @include flex-row;
+        align-items: center;
 
         &__icon {
-          width: 10%;
+          width: 7%;
+          height: 70%;
           margin-right: 1%;
         }
 
@@ -241,7 +247,7 @@ export default {
       }
     }
 
-    &__add-to-chart {
+    &__add-to-cart {
       background: $blue;
       padding-top: 2%;
       padding-bottom: 2%;
