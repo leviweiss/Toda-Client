@@ -55,12 +55,12 @@ export default new Vuex.Store({
       state.filter1Value = value;
     },
     OPEN_COUPON_MODAL(state, coupon) {
-      state.showCouponModal = true;
       state.couponModalToShow = coupon;
+      state.showCouponModal = true;
     },
     CLOSE_COUPON_MODAL(state) {
-      state.showCouponModal = false;
       state.couponModalToShow = undefined;
+      state.showCouponModal = false;
     },
     SET_DATA(state, data) {
       state.data = data;

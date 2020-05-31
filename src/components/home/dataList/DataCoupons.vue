@@ -4,7 +4,7 @@
     @click="openCouponModal(coupon)">
       <coupon v-bind="coupon"/>
     </div>
-    <coupon-modal v-show="showCouponModal" @close="closeCouponModal"/>
+    <coupon-modal v-if="showCouponModal" @close="closeCouponModal"/>
   </div>
 </template>
 

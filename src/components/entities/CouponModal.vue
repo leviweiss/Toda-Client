@@ -72,7 +72,6 @@ export default {
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         this.$emit('close');
-        this.groupName = '';
       }
     });
   },
@@ -94,11 +93,9 @@ export default {
   methods: {
     wrapperClick() {
       this.$emit('close');
-      this.groupName = '';
     },
     closeElementClick() {
       this.$emit('close');
-      this.groupName = '';
     },
   },
 };
