@@ -62,10 +62,6 @@ export default {
   &__bottom {
     flex-wrap: wrap;
     justify-content: space-around;
-
-    &__coupons {
-
-    }
   }
 }
 

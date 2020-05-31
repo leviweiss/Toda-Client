@@ -3,6 +3,8 @@ import getCategories from './utils';
 
 let couponId = 1;
 let businessId = 1000;
+let descriptionId = 1;
+let namesId = 1;
 
 function addCoupon(coupon) {
   // eslint-disable-next-line no-console
@@ -17,14 +19,44 @@ function getRandomPhoneNumber() {
   return `054-${endOfPhoneNumber}`;
 }
 
+const descriptions = [
+  'Buy one get one-to ',
+  'Nails polish in 15$ Stela’s nails',
+  '40% off on Summer Collection Rona Bikinis',
+  '15% off on two days zimmer Golan vacation',
+  '3 hours cooking workshop in 50$ Galit home kitchen',
+];
+
+const names = [
+  'Taylor spa',
+  'Stela’s nails',
+  'Rona Bikinis',
+  'Golan vacation',
+  'Galit home kitchen',
+];
+
+function getDescription() {
+  // eslint-disable-next-line no-plusplus
+  const index = descriptionId++ % 5;
+  return descriptions[index];
+}
+
+function getName() {
+  // eslint-disable-next-line no-plusplus
+  const index = namesId++ % 5;
+  return names[index];
+}
+
 function createCategoryData(catagoryName, numberOfElements) {
   const coupons = [];
   for (let i = 0; i < numberOfElements; i += 1) {
     coupons.push({
       // eslint-disable-next-line no-plusplus
       id: couponId++,
-      name: `${catagoryName.charAt(0)}_name${i}`,
-      description: `description${i} `.repeat(10),
+      // name: `${catagoryName.charAt(0)}_name${i}`,
+      name: getName(),
+      // description: `description${i} `.repeat(10),
+      description: getDescription(),
       priceNow: `7${i}`,
       priceBefore: `9${i}`,
       phoneNumber: getRandomPhoneNumber(),
@@ -37,8 +69,9 @@ function createCategoryData(catagoryName, numberOfElements) {
     businesses.push({
       // eslint-disable-next-line no-plusplus
       id: businessId++,
-      name: `${catagoryName.charAt(0)}_name${i}`,
-      description: `description${i} `.repeat(10),
+      name: getName(),
+      // description: `description${i} `.repeat(10),
+      description: getDescription(),
     });
   }
 

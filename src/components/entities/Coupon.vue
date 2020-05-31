@@ -87,7 +87,7 @@ export default {
       margin: 1%;
       padding: 6% 0;
       flex: 1;
-      font-size: $small-font;
+      font-size: $small-medium-font;
     }
 
     &__prices {
