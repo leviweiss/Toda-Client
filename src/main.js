@@ -18,7 +18,6 @@ const routes = [
   { path: '/about-us', component: AppAboutUs },
   { path: '/business/:id', component: AppBusiness },
 ];
-
 const router = new VueRouter({
   routes,
   mode: 'history',

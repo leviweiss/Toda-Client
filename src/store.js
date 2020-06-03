@@ -7,6 +7,7 @@ import getCategories from './services/utils';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+  strict: process.env.NODE_ENV !== 'production',
   state: {
     chosenCategory: 1,
     chosenHomeButton: 'coupon',
